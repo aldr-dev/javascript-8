@@ -1,0 +1,54 @@
+.main-page-wrapper {
+  display: flex;
+  gap: 30px;
+}
+
+.col-filter {
+  width: 320px;
+  flex-shrink: 0;
+}
+
+.col-result {
+  width: 100%;
+}
+
+.category-title {
+  margin: 0 0 20px 0;
+}
+
+.filter-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 2px solid #000;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.filter-item {
+  width: 100%;
+  background: #6b8bcb;
+  border-bottom: 1px solid #000;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+
+.filter-item:hover {
+  background: #2666b2;
+}
+
+.filter-link {
+  display: inline-block;
+  text-decoration: none;
+  width: 100%;
+  color: #081b44;
+  padding: 8px 10px;
+}
+
+.filter-link.active {
+  background: #2666b2;
+}
+
+.filter-list .filter-item:last-child {
+  border-bottom: none;
+}

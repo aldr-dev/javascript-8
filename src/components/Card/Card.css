@@ -1,0 +1,62 @@
+.card {
+  border: 2px solid #000;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.card-header {
+  background: #6b8bcb;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px 0 5px;
+}
+
+.card-title {
+  font-weight: bold;
+  font-size: 18px;
+  color: #081b44;
+}
+
+.button-inner {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  gap: 13px;
+}
+
+.card-btn-remove {
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  font-size: 28px;
+  transition: .3s ease-in-out;
+  color: #081b44;
+}
+
+.card-btn-remove:hover {
+  color: #16316e;
+}
+
+.card-btn-edit {
+  display: inline-block;
+  text-decoration: none;
+  color: #081b44;
+  transform: rotate(-360deg);
+  font-size: 28px;
+  transition: .3s ease-in-out;
+}
+
+.card-btn-edit:hover {
+  color: #16316e;
+}
+
+.card-text, .card-author {
+  margin: 0;
+}
+
+.card-body {
+  padding: 10px;
+}

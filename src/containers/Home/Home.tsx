@@ -1,11 +1,13 @@
 import React, {useState, useEffect} from 'react';
-import {Posts} from '../../types';
+import {Categories, Posts} from '../../types';
 import {NavLink, useParams} from 'react-router-dom';
 import axiosApi from '../../axiosApi';
 import Preloader from '../../components/Preloader/Preloader';
 import ErrorStatus from '../../components/ErrorStatus/ErrorStatus';
+import Card from '../../components/Card/Card';
+import './Home.css';
 
-const categories = [
+const categories: Categories[] = [
   { title: 'All', id: '/' },
   { title: 'Star Wars', id: 'star-wars' },
   { title: 'Famous people', id: 'famous-people' },
@@ -86,22 +88,32 @@ const Home = () => {
 
   return (
     <>
-      {<h2>{categoryTitle}</h2>}
-      {posts.length !== 0 ? '' : 'Quote list is empty, please add a quote!'}
-      <Preloader preloader={isLoader} />
-      <ErrorStatus
-        error={isError}
-        handleError={handleError}>
-        An error has occurred. Failed to process information.
-      </ErrorStatus>
-      {posts.map((post) => (
-        <Card key={post.id} post={post} onDelete={deletePost}/>
-      ))}
-      {categories.map(category => (
-        <NavLink key={category.id}  to={category.id === '/' ? '/' : `/quotes/${category.id}`}>
-          {category.title}
-        </NavLink>
-      ))}
+      <div className="main-page-wrapper">
+        <div className="col-filter">
+          <ul className="filter-list">
+            {categories.map(category => (
+              <li className="filter-item" key={category.id}>
+                <NavLink className="filter-link" key={category.id}  to={category.id === '/' ? '/' : `/quotes/${category.id}`}>
+                  {category.title}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="col-result">
+          {<h2 className="category-title">{categoryTitle}</h2>}
+          {posts.length !== 0 ? '' : 'Quote list is empty, please add a quote!'}
+          <Preloader preloader={isLoader} />
+          <ErrorStatus
+            error={isError}
+            handleError={handleError}>
+            An error has occurred. Failed to process information.
+          </ErrorStatus>
+          {posts.map((post) => (
+            <Card key={post.id} post={post} onDelete={deletePost}/>
+          ))}
+        </div>
+      </div>
     </>
   );
 };

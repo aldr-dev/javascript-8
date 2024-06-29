@@ -24,7 +24,7 @@ const Pages = () => {
           <Route path="/add-quote" element={
             <QuoteForm />
           }/>
-          <Routes path="*" element={
+          <Route path="*" element={
             <PageNotFound/>
           }/>
         </Routes>

@@ -10,3 +10,8 @@ export interface Posts {
   category: string,
   text: string,
 }
+
+export interface Categories {
+  title: string;
+  id: string
+}
