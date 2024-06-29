@@ -53,8 +53,13 @@
   color: #16316e;
 }
 
-.card-text, .card-author {
+.card-author {
   margin: 0;
+  font-weight: bold;
+}
+
+.card-text {
+  margin-top: 0;
 }
 
 .card-body {
