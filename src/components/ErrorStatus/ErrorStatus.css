@@ -1,0 +1,16 @@
+.error-alert {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  background: #f8d7da;
+  padding: 13px;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  margin: 0 0 10px 0;
+}
+
+.close {
+  font-size: 20px;
+  margin-left: auto;
+  cursor: pointer;
+}
