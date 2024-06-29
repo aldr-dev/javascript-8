@@ -1,0 +1,31 @@
+.page-error {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.page-error-title {
+  margin: 0 0 20px 0;
+  font-size: 40px;
+}
+
+.page-error-desc {
+  margin: 0 0 20px 0;
+  max-width: 680px;
+}
+
+.page-error-btn {
+  text-decoration: none;
+  background: #2c5898;
+  color: #fff;
+  border-radius: 5px;
+  padding: 9px 12px;
+  transition: .2s ease-in-out;
+  cursor: pointer;
+}
+
+.page-error-btn:hover {
+  background: #174173;
+}

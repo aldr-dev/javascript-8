@@ -1,9 +1,10 @@
 import './App.css';
+import Pages from '../Pages/Pages';
 
 const App = () => {
   return (
     <>
-
+      <Pages />
     </>
   );
 };
